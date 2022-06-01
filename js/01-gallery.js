@@ -19,18 +19,18 @@ function importGallery(images) {
 };
 
 function openModal(event) {
+    event.preventDefault()
     if (event.target.nodeName !== 'IMG') {
         return
     }
-    else {
-        event.preventDefault()
+        
         console.log(event.target.nodeName)
         const instance = basicLightbox.create(`
     <img src="${event.target.dataset['source']}" width="800" height="600">
 `)
 
         instance.show()
-    }
+    
 
 }
 ;
