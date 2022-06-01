@@ -16,22 +16,10 @@ function importGallery(images) {
     
 };
 
-
-function openModal(event) {
-    if (event.target.nodeName !== 'IMG') {
-        return
-    }
-    else {
-        event.preventDefault();
-        console.log(event.target.nodeName);        
-        var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
-        
-    }
-
-}
-
-
-document.addEventListener('click', openModal);
-
 importGallery(galleryItems);
+
+
+const lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+
+
 
